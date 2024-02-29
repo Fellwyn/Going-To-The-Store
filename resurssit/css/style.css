@@ -1,0 +1,111 @@
+html, body {
+    background-color: rgb(218, 118, 135);
+
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color:rgb(75, 26, 18);
+}
+
+.header {
+    font-size: 30px;
+    color: rgb(247, 235, 79);
+    text-align: center;
+   padding: 2rem;
+
+}
+
+.beginningText {
+    font-size: 1.2rem;
+}
+
+.buttonContainer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    display: flex;
+    flex-direction: column;
+    padding: .2rem;
+}
+
+
+
+
+.middleArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 550px;
+
+
+
+    border: 2px solid lightgreen;
+
+    /*background: url('../kuvat/myList.png') no-repeat center center;
+    background-size: 1000px 900px;
+    background-position: 35% 30%;*/
+}
+
+.timer {
+    width: 260px;
+    height: 20px;
+    background-color: grey;
+}
+
+.timerInner{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(148, 238, 148);
+}
+
+
+.levelContainer {
+    border: 2px solid lightgreen;
+    height: 200px;
+    width: 300px;
+
+}
+
+.textContainer {
+    position: relative;
+    height: 200px;
+    width: 300px;
+    word-wrap: break-word;
+    font-weight: bolder;
+
+    border: 2px solid lightgreen;
+
+    /*background:  url('../kuvat/myList.png') no-repeat;
+    background-size: 900px 900px;*/
+
+    
+}
+
+.displayContainer {
+
+    height: 200px;
+    width: 300px;
+    word-wrap: break-word;
+    font-weight: bolder;
+
+    border: 2px solid lightgreen;
+}
+
+.myList {
+
+    height: 900px;
+
+    top: 25%;
+    left: 15%;
+
+}
+
+
+
+.footer {
+    background-color: rgb(189, 113, 166);
+    text-align: center;
+}
