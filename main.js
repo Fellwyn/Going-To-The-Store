@@ -125,6 +125,8 @@ function createButtons() {
         category.forEach(item => {
 
     let newBtn = document.createElement('button');
+    newBtn.className = 'itemButton';
+ 
     newBtn.innerText= `${item}`;
     document.querySelector('.textContainer').appendChild(newBtn);
 
@@ -135,6 +137,8 @@ function createButtons() {
         displayContainer.innerHTML += `${this.innerText}` + ', '; 
         clickedItems.push(this.innerText);
         clickCount++;
+        let clickAudio = new Audio('./resurssit/music/click.wav');
+        clickAudio.play();
 
 
         
@@ -144,6 +148,8 @@ function createButtons() {
         level.textContent = levelCount;
         continueButton.style.display = 'block';
         goButton.style.display = 'none';
+        let audio = new Audio('./resurssit/music/achievement.wav');
+        audio.play();
 
 
         const timerElement = document.querySelector('.timerInner');
@@ -153,10 +159,17 @@ function createButtons() {
         if(levelCount === 4) {
             displayContainer.innerHTML = 'You won the game!';
             continueButton.style.display = 'none';
+
+            let winAudio = new Audio('./resurssit/music/applause.wav');
+            winAudio.play();
+
         }
     }
     else if(clickCount === randomItems.length) {
         displayContainer.innerHTML = 'You missed some items!';
+
+        let failAudio = new Audio('./resurssit/music/negative.mp3');
+        failAudio.play();
         
         const timerElement = document.querySelector('.timerInner');
         timerElement.style.width = '100%';
@@ -237,24 +250,32 @@ continueButton.addEventListener('click', yourList);
     }
 
     
-        textContainer.innerHTML = 'Your list: <br><br>'
-
-        //test
-        let backroundContainer = document.querySelector('.middleArea');
-        backroundContainer.style.backgroundImage = "url('../kuvat/myList.png')";
-       //test
+        //textContainer.innerHTML = 'Your list: <br><br>'
+        textContainer.innerHTML = '<br><br><br>'
+     
         
 
         textContainer.innerHTML += randomItems.join('<br>'); 
+
+        
+        //textContainer.style.backgroundColor = 'white';
+        // works textContainer.style.backgroundImage = "url('./resurssit/kuvat/myList.png')";
+
+        textContainer.style.cssText = " background: no-repeat center/cover url('./resurssit/kuvat/myList.png'); background-size: 140%; background-position: -15px -70px;";
+
   
         displayContainer.innerHTML = '';
 
     setTimeout(() => {
         textContainer.innerHTML = '';
+        textContainer.style.backgroundColor = ''; //modify the background
+        textContainer.style.cssText = '';
+
     }, 1800);
 
     setTimeout(() => {
         textContainer.innerHTML = createButtons();
+
     }, 1900);
 
     

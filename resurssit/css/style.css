@@ -1,22 +1,46 @@
 html, body {
     background-color: rgb(218, 118, 135);
 
-    justify-content: center;
-    align-items: center;
+
     font-size: 16px;
     color:rgb(75, 26, 18);
 }
 
 .header {
     font-size: 30px;
-    color: rgb(247, 235, 79);
+    color: rgb(255, 255, 5);
+    text-shadow: 5px 5px 5px rgb(5, 4, 4);
     text-align: center;
-   padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    margin: 2%;
+  
+   
+   background-image: url('../kuvat/shade_red.png');
+   background-repeat: no-repeat;
+   background-color: rgb(144, 144, 252);
+   
+
+    background-size: 90% 300%;
+    background-position: 30% 46%;
+
+
+    border: 3px solid rgb(95, 51, 9);
 
 }
 
+/*.headTextContainer {
+    background-color: rgb(248, 244, 238, 0.5); 
+    width: 550px;   
+}*/
+
+
+
 .beginningText {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+
 }
 
 .buttonContainer {
@@ -27,9 +51,13 @@ html, body {
 
     display: flex;
     flex-direction: column;
-    padding: .2rem;
-}
 
+    margin: 1rem;
+}
+.startButtons {
+    margin: 0.4rem;
+    width: 90px;
+}
 
 
 
@@ -38,61 +66,103 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    height: 550px;
+    height: 750px;
 
 
 
-    border: 2px solid lightgreen;
+    border: 3px solid rgb(95, 51, 9);
 
-    /*background: url('../kuvat/myList.png') no-repeat center center;
-    background-size: 1000px 900px;
-    background-position: 35% 30%;*/
+    background-color: rgb(124, 54, 54);
+    
+    background-image: url('../kuvat/shop_sign700.png');
+    background-repeat: no-repeat;
+    background-size: 110% 120%;
+    background-position: 53% 60%;
+
+    margin-bottom: 0px;
 }
 
 .timer {
-    width: 260px;
+    position: absolute;
+
+    width: 220px;
     height: 20px;
     background-color: grey;
+    border: 1px solid black;
+    bottom: 5px;
+    left: 5px;
+
 }
 
 .timerInner{
     width: 100%;
     height: 20px;
-    background-color: rgb(148, 238, 148);
+    background-color: rgb(169, 238, 129);
+
 }
 
 
 .levelContainer {
-    border: 2px solid lightgreen;
-    height: 200px;
-    width: 300px;
+    position: relative;
+
+    border: 2px solid rgb(95, 51, 9);
+    height: 250px;
+    width: 250px;
+    padding-left: 5px;
+
+  background-color: rgb(166, 223, 220);
 
 }
 
 .textContainer {
-    position: relative;
-    height: 200px;
-    width: 300px;
+   /* position: relative;*/
+
+    height: 250px;
+    width: 250px;
     word-wrap: break-word;
     font-weight: bolder;
 
-    border: 2px solid lightgreen;
+    text-align: center;
+   
+    padding: 0px 25px; /* makes the list be on right place, other solutions?*/
 
-    /*background:  url('../kuvat/myList.png') no-repeat;
-    background-size: 900px 900px;*/
+   border: 2px solid rgb(95, 51, 9);
+   background-color: rgb(166, 223, 220);
 
-    
 }
 
 .displayContainer {
 
-    height: 200px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     word-wrap: break-word;
     font-weight: bolder;
+    
+   /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+*/
+    text-align: center;
+    
 
-    border: 2px solid lightgreen;
+    border: 2px solid rgb(95, 51, 9);
+    background-color: rgb(166, 223, 220);
+
 }
+
+
+.itemButton {
+    margin: 3px;
+}
+
+
+
+button:hover {
+    cursor: pointer;
+}
+
+
 
 .myList {
 
@@ -106,6 +176,23 @@ html, body {
 
 
 .footer {
-    background-color: rgb(189, 113, 166);
+    position: relative;
+    
+    height: 80px;
     text-align: center;
+    background-image: url('../kuvat/tile1.png');
+    background-repeat: repeat;
+    background-size: auto 190px; /*px no effect?*/
+    background-position: 50% 70%;
+   
+    margin-top: 0px;
+    
+
+}
+a {
+    position: absolute;
+    font-size: 1.3rem;
+    color: rgb(146, 110, 69);
+    top: 12%;
+    left: 45%;
 }
