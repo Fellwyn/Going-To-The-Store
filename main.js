@@ -100,6 +100,40 @@ function countDown(duration)  {
     
 }
 
+let achievementAudio = new Audio('./resurssit/music/achievement.wav');
+
+//levelCount++ and winning condition
+function checkGameCompletion(){
+    if(randomItems.every(item => clickedItems.includes(item))) {
+        levelCount++;
+
+        level.innerHTML = levelCount;
+
+
+        if(levelCount === 4) {
+            displayContainer.innerHTML = 'You are the ultimate grocery shopper!'; //does not work
+            continueButton.style.display = 'none';
+
+
+
+
+            levelCount = 'You won the game!'; // works
+
+
+            
+            achievementAudio.pause(); //works
+            achievementAudio.src = ''; 
+            achievementAudio.currentTime = 0;  
+
+            let winAudio = new Audio('./resurssit/music/winfretless.ogg');  //works
+            winAudio.play();
+        }
+
+
+    }
+}
+
+
 
 
 
@@ -133,37 +167,48 @@ function createButtons() {
 
 
 
+
+
+
+
+
+
     newBtn.addEventListener('click', function() {
         displayContainer.innerHTML += `${this.innerText}` + ', '; 
         clickedItems.push(this.innerText);
         clickCount++;
         let clickAudio = new Audio('./resurssit/music/click.wav');
         clickAudio.play();
+        if(clickCount === randomItems.length) {
+            checkGameCompletion();
+        }
 
 
         
     if(randomItems.every(item => clickedItems.includes(item)))  {
+
+        
         displayContainer.innerHTML = 'You got everything!';
-        levelCount++;
+        
         level.textContent = levelCount;
         continueButton.style.display = 'block';
         goButton.style.display = 'none';
-        let audio = new Audio('./resurssit/music/achievement.wav');
-        audio.play();
+
+        achievementAudio.play();
 
 
         const timerElement = document.querySelector('.timerInner');
         timerElement.style.width = '100%';
         
         timeIDs.forEach(timeID => clearTimeout(timeID));
-        if(levelCount === 4) {
-            displayContainer.innerHTML = 'You won the game!';
-            continueButton.style.display = 'none';
+        
 
-            let winAudio = new Audio('./resurssit/music/applause.wav');
-            winAudio.play();
 
-        }
+
+
+
+
+
     }
     else if(clickCount === randomItems.length) {
         displayContainer.innerHTML = 'You missed some items!';
@@ -190,7 +235,7 @@ return newBtn;
     }
     
 
-
+   //why inside upper function? well, it works
     function startOver() {
         goButton.style.display = 'block'; 
         againButton.style.display = 'none';
@@ -216,6 +261,13 @@ return newBtn;
 
 againButton.addEventListener('click', startOver); {
 }
+
+
+
+
+
+
+
 
 
 //Your randomly generated list
