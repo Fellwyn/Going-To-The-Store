@@ -9,10 +9,10 @@ I practiced creating buttons in JavaScript from random items and printing their 
 
 #### Through this project, I learned:
 
--How to dynamically create buttons with JavaScript
--How to add content like images and sounds inside if/else statements
--More about built-in JavaScript methods
--Basic logic flow to make the game work by clicking buttons in the correct order
+- How to dynamically create buttons with JavaScript
+- How to add content like images and sounds inside if/else statements
+- More about built-in JavaScript methods
+- Basic logic flow to make the game work by clicking buttons in the correct order
 
 I used a few tools to help me along the way:
 YouTube, ChatGPT, and GitHub Copilot.
